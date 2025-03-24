@@ -1,3 +1,5 @@
+import GlassButton from "./ui/glassButton/glass-button";
+
 const HeroSection = () => {
   return (
     <div className=" w-full h-screen flex justify-center items-center fixed">
