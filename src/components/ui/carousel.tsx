@@ -1,5 +1,5 @@
 "use client";
-import { IconArrowNarrowRight } from "@tabler/icons-react";
+import { ArrowRight } from "lucide-react";
 import { useState, useRef, useId, useEffect } from "react";
 
 interface SlideData {
@@ -20,7 +20,7 @@ const Slide = ({ slide, index, current, handleSlideClick }: SlideProps) => {
 
   const xRef = useRef(0);
   const yRef = useRef(0);
-  const frameRef = useRef<number>();
+  const frameRef = useRef<number>(null);
 
   useEffect(() => {
     const animate = () => {
@@ -144,7 +144,7 @@ const CarouselControl = ({
       title={title}
       onClick={handleClick}
     >
-      <IconArrowNarrowRight className=" bg-white dark:text-neutral-200" />
+      <ArrowRight className="bg-white" />
     </button>
   );
 };

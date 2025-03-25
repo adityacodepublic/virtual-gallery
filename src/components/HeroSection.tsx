@@ -1,5 +1,6 @@
 import { Link } from "react-router";
 import { Search, Menu } from "lucide-react";
+import GlassButton from "./ui/glassButton/glass-button";
 
 const HeroSection = () => {
   return (
@@ -228,6 +229,9 @@ const HeroSection = () => {
                 <div className="text-sm mb-8 max-w-[200px]">
                   See The Most Influential And Famous Paintings In The World
                   Here
+                </div>
+                <div className=" w-full flex justify-center p-3">
+                  <GlassButton>Explore Museum</GlassButton>
                 </div>
                 <div className="mt-auto">
                   <div className="relative">

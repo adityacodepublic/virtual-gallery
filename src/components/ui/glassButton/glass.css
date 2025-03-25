@@ -18,21 +18,6 @@
 }
 
 /* Base Styles */
-body {
-  width: 100%;
-  height: 100vh;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: var(--global--size);
-  background-color: rgba(215, 215, 215, 1);
-  font-family: "Inter", sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  overflow: hidden;
-}
 
 /* ========== BUTTON ========== */
 
@@ -85,7 +70,7 @@ body {
 
 /* ========== BUTTON BASE STYLES ========== */
 
-button {
+.button {
   /* Basic Styling */
   --border-width: clamp(1px, 0.0625em, 4px);
   all: unset;
@@ -113,7 +98,7 @@ button {
   transition: all var(--anim--hover-time) var(--anim--hover-ease);
 }
 
-button:hover {
+.button:hover {
   transform: scale(0.975);
   backdrop-filter: blur(0.01em);
   -webkit-backdrop-filter: blur(0.01em);
@@ -127,7 +112,7 @@ button:hover {
 }
 
 /* Button Text */
-button span {
+.button span {
   position: relative;
   display: block;
   user-select: none;
@@ -147,12 +132,14 @@ button span {
   padding-block: 0.875em;
 }
 
-button:hover span {
+.button:hover span {
   text-shadow: 0.025em 0.025em 0.025em rgba(0, 0, 0, 0.12);
 }
-
+.button:focus {
+  outline: none;
+}
 /* Text */
-button span::after {
+.button span::after {
   content: "";
   display: block;
   position: absolute;
@@ -181,19 +168,19 @@ button span::after {
     --angle-2 calc(var(--anim--hover-time) * 1.25) var(--anim--hover-ease);
 }
 
-button:hover span::after {
+.button:hover span::after {
   background-position: 25% 50%;
 }
 
-button:active span::after {
+.button:active span::after {
   background-position: 50% 15%;
   --angle-2: -15deg;
 }
 
 /* Touch Devices */
 @media (hover: none) and (pointer: coarse) {
-  button span::after,
-  button:active span::after {
+  .button span::after,
+  .button:active span::after {
     --angle-2: -45deg;
   }
 }
@@ -201,7 +188,7 @@ button:active span::after {
 /* ========== BUTTON OUTLINE ========== */
 
 /* Outline */
-button::after {
+.button::after {
   content: "";
   position: absolute;
   z-index: 1;
@@ -229,18 +216,18 @@ button::after {
   box-shadow: inset 0 0 0 calc(var(--border-width) / 2) rgba(255, 255, 255, 0.5);
 }
 
-button:hover::after {
+.button:hover::after {
   --angle-1: -125deg;
 }
 
-button:active::after {
+.button:active::after {
   --angle-1: -75deg;
 }
 
 @media (hover: none) and (pointer: coarse) {
-  button::after,
-  button:hover::after,
-  button:active::after {
+  .button::after,
+  .button:hover::after,
+  .button:active::after {
     --angle-1: -75deg;
   }
 }
