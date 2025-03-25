@@ -1,11 +1,10 @@
-import { CarouselDemo } from "./components/CarouselDemo";
-import HeroSection from "./components/HeroSection";
+"use client";
+import { useRef, useState } from "react";
 import { Cursor } from "@/components/core/cursor";
 import { AnimatePresence, motion } from "motion/react";
 import { PlusIcon } from "lucide-react";
-import { useRef, useState } from "react";
 
-function App() {
+export function Cursor1() {
   const [isHovering, setIsHovering] = useState(false);
   const targetRef = useRef<HTMLDivElement>(null);
 
@@ -17,9 +16,9 @@ function App() {
       setIsHovering(isInside);
     }
   };
+
   return (
-    <div className="w- h-full">
-      {/* <Cursor /> */}
+    <div className="flex h-[400px] w-full items-center justify-center">
       <Cursor
         attachToParent
         variants={{
@@ -41,7 +40,7 @@ function App() {
             width: isHovering ? 80 : 16,
             height: isHovering ? 32 : 16,
           }}
-          className="flex items-center justify-center rounded-[24px] bg-gray-500/80 backdrop-blur-md dark:bg-gray-300/80"
+          className="flex items-center justify-center rounded-[24px] bg-gray-500/40 backdrop-blur-md dark:bg-gray-300/40"
         >
           <AnimatePresence>
             {isHovering ? (
@@ -59,13 +58,13 @@ function App() {
           </AnimatePresence>
         </motion.div>
       </Cursor>
-      <HeroSection />
-      <CarouselDemo />
-      <footer className="w-full text-center py-4 bg-[#f5f0e6]">
-        © {new Date().getFullYear()} Quantum Coders. All rights reserved.
-      </footer>
+      <div ref={targetRef}>
+        <img
+          src="https://i.pinimg.com/564x/75/3c/3f/753c3f1a9f85871ffa7a7a78bcf49f66.jpg"
+          alt="Olympic logo Paris 2024"
+          className="h-52 w-full max-w-48 rounded-[8px] border border-zinc-100 object-cover"
+        />
+      </div>
     </div>
   );
 }
-
-export default App;
