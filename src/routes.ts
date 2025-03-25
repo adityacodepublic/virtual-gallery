@@ -8,7 +8,7 @@ const router = createBrowserRouter([
     Component: App,
   },
   {
-    path: "/spline",
+    path: "/explore",
     Component: Spliner,
   },
 ]);
