@@ -8,6 +8,9 @@ function App() {
       <Cursor />
       <HeroSection />
       <CarouselDemo />
+      <footer className="w-full text-center py-4 bg-[#f5f0e6]">
+        © {new Date().getFullYear()} Quantum Coders. All rights reserved.
+      </footer>
     </div>
   );
 }
