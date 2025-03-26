@@ -1,6 +1,6 @@
 "use client";
-
 import Carousel from "@/components/ui/carousel";
+
 export function CarouselDemo() {
   const slideData = [
     {
@@ -17,7 +17,7 @@ export function CarouselDemo() {
     },
     {
       title: "Illuminated Nights",
-      button: "Explore Gallery",
+      button: "  Gallery",
       src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRX5H9bXOeP1-ks7-es_IFCxwkiZxAg20-9Mg&s",
       go: "https://www.britannica.com/topic/The-Starry-Night",
     },
@@ -31,7 +31,7 @@ export function CarouselDemo() {
 
   return (
     <div className="relative bg-[#f5f0e6] overflow-hidden w-full h-full py-20 ">
-      <h1 className="font-serif pb-5 font-medium text-4xl text-center text-[#1d1d1d]">
+      <h1 className="font-serif pb-10 font-medium text-4xl text-center text-[#1d1d1d]">
         Explore The Art
       </h1>
       <Carousel slides={slideData} />

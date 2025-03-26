@@ -226,16 +226,16 @@ const HeroSection = () => {
                   <div className="text-sm font-medium">Since</div>
                   <div className="text-6xl font-serif">1481</div>
                 </div>
-                <div className="text-sm mb-8 max-w-[200px]">
+                <div className="text-sm mb-2 max-w-[200px]">
                   See The Most Influential And Famous Paintings In The World
                   Here
                 </div>
-                <div className=" w-full flex justify-center p-3">
+                <div className="w-full flex justify-center my-14">
                   <GlassButton>Explore Museum</GlassButton>
                 </div>
                 <div className="mt-auto">
                   <div className="relative">
-                    <div className="text-[120px] font-serif leading-none tracking-tighter">
+                    <div className="text-[120px] font-serif leading-none tracking-tighter mb-10">
                       1968
                     </div>
                     {/* Barcode-like design */}
