@@ -1,6 +1,6 @@
 import { createBrowserRouter } from "react-router";
 import App from "./App";
-import Spliner from "./Spline";
+import Spliner from "./components/Spline";
 
 const router = createBrowserRouter([
   {
