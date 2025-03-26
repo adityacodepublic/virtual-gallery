@@ -31,7 +31,7 @@ export function VideoCarousel() {
 
   return (
     <div className="relative bg-[#f5f0e6] overflow-hidden w-full h-full py-20 ">
-      <h1 className="font-serif pb-8 font-medium text-5xl text-center text-[#1d1d1d]">
+      <h1 className="font-serif px-1 pb-8 font-medium text-5xl text-center text-[#1d1d1d]">
         Explore The Places
       </h1>
       <Carousel slides={slideData} />

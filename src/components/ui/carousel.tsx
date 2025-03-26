@@ -1,7 +1,6 @@
 "use client";
-import { ArrowRight, ChevronRight } from "lucide-react";
+import { ChevronRight } from "lucide-react";
 import { useState, useRef, useId, useEffect } from "react";
-import { useNavigate } from "react-router";
 import { Button } from "./button";
 
 interface SlideData {
@@ -19,7 +18,6 @@ interface SlideProps {
 }
 
 const Slide = ({ slide, index, current, handleSlideClick }: SlideProps) => {
-  const navigate = useNavigate();
   const slideRef = useRef<HTMLLIElement>(null);
 
   const handleClick = (text: string | undefined) => {
@@ -66,17 +64,13 @@ const Slide = ({ slide, index, current, handleSlideClick }: SlideProps) => {
     yRef.current = 0;
   };
 
-  const imageLoaded = (event: React.SyntheticEvent<HTMLImageElement>) => {
-    event.currentTarget.style.opacity = "1";
-  };
-
   const { src, button, title } = slide;
 
   return (
     <div className="[perspective:1200px] [transform-style:preserve-3d]">
       <li
         ref={slideRef}
-        className="flex flex-1 flex-col items-center justify-center relative text-center text-white opacity-100 transition-all duration-300 ease-in-out w-[150vmin] h-[85vmin] mx-[10vmin] z-10 "
+        className="flex flex-1 flex-col items-center justify-center relative text-center text-white opacity-100 transition-all duration-300 ease-in-out w-[100vmin] h-[155vmin] md:w-[150vmin] md:h-[85vmin] mx-[10vmin] z-10 "
         onClick={() => handleSlideClick(index)}
         onMouseMove={handleMouseMove}
         onMouseLeave={handleMouseLeave}
@@ -187,11 +181,11 @@ export default function Carousel({ slides }: CarouselProps) {
 
   return (
     <div
-      className="relative w-[70vmin] h-[70vmin] mx-auto"
+      className="relative w-[70vmin] h-[155vmin] md:h-[70vmin] mx-auto mb-6"
       aria-labelledby={`carousel-heading-${id}`}
     >
       <ul
-        className="absolute flex mx-[-50vmin] transition-transform duration-1000 ease-in-out"
+        className="absolute flex mx-[-25vmin] md:mx-[-50vmin] transition-transform duration-1000 ease-in-out"
         style={{
           transform: `translateX(-${current * (100 / slides.length)}%)`,
         }}

@@ -8,7 +8,7 @@ function App() {
       <Curson />
       <HeroSection />
       <VideoCarousel />
-      <footer className="w-full text-center pt-3  bg-[#f5f0e6]">
+      <footer className="w-full text-center bg-[#f5f0e6]">
         {new Date().getFullYear()} Quantum Coders.
       </footer>
     </div>
