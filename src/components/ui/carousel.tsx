@@ -76,7 +76,7 @@ const Slide = ({ slide, index, current, handleSlideClick }: SlideProps) => {
     <div className="[perspective:1200px] [transform-style:preserve-3d]">
       <li
         ref={slideRef}
-        className="flex flex-1 flex-col items-center justify-center relative text-center text-white opacity-100 transition-all duration-300 ease-in-out w-[70vmin] h-[70vmin] mx-[4vmin] z-10 "
+        className="flex flex-1 flex-col items-center justify-center relative text-center text-white opacity-100 transition-all duration-300 ease-in-out w-[150vmin] h-[85vmin] mx-[10vmin] z-10 "
         onClick={() => handleSlideClick(index)}
         onMouseMove={handleMouseMove}
         onMouseLeave={handleMouseLeave}
@@ -98,16 +98,16 @@ const Slide = ({ slide, index, current, handleSlideClick }: SlideProps) => {
                 : "none",
           }}
         >
-          <img
-            className="absolute inset-0 w-[120%] h-[120%] object-cover opacity-100 transition-opacity duration-600 ease-in-out"
+          <video
+            className="absolute inset-0 w-[150%] h-[120%] object-cover opacity-100 transition-opacity duration-600 ease-in-out"
             style={{
               opacity: current === index ? 1 : 0.5,
             }}
-            alt={title}
             src={src}
-            onLoad={imageLoaded}
-            loading="eager"
-            decoding="sync"
+            onLoadedMetadata={(e) => (e.currentTarget.playbackRate = 0.5)}
+            autoPlay
+            loop
+            muted
           />
           {current === index && (
             <div className="absolute inset-0  transition-all duration-1000" />
@@ -191,7 +191,7 @@ export default function Carousel({ slides }: CarouselProps) {
       aria-labelledby={`carousel-heading-${id}`}
     >
       <ul
-        className="absolute flex mx-[-4vmin] transition-transform duration-1000 ease-in-out"
+        className="absolute flex mx-[-50vmin] transition-transform duration-1000 ease-in-out"
         style={{
           transform: `translateX(-${current * (100 / slides.length)}%)`,
         }}
