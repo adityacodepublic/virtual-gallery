@@ -1,7 +1,7 @@
 "use client";
 import Carousel from "@/components/ui/carousel";
 
-export function CarouselDemo() {
+export function VideoCarousel() {
   const slideData = [
     {
       title: "The Enchanted Peaks",

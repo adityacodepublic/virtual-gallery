@@ -1,6 +1,6 @@
 import { createBrowserRouter } from "react-router";
 import App from "./App";
-import Spliner from "./components/Spline";
+import Globe from "./components/Globe";
 
 const router = createBrowserRouter([
   {
@@ -9,7 +9,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/explore",
-    Component: Spliner,
+    Component: Globe,
   },
 ]);
 
