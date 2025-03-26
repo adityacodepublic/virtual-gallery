@@ -1,0 +1,27 @@
+{
+  "name": "Virtual Gallery",
+  "short_name": "Museum",
+  "description": "A virtual museum with exploring art, a 3d globe to explore various museum and sites across world.",
+  "start_url": "/",
+  "theme_color": "#000000",
+  "background_color": "#ffffff",
+  "display": "standalone",
+  "icons": [
+    {
+      "src": "/icon.png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/icon.png",
+      "sizes": "256x256"
+    },
+    {
+      "src": "/icon.png",
+      "sizes": "384x384"
+    },
+    {
+      "src": "/icon.png",
+      "sizes": "512x512"
+    }
+  ]
+}
