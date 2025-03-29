@@ -2,9 +2,16 @@
 
 **Virtual Gallery & Museum** is an immersive web experience that lets users explore global museums in a unique way.
 
+
+
+https://github.com/user-attachments/assets/567e3170-ccdb-4184-b10b-4aa5474461b4
+
+
+
 ### Features:
 
 - **Explore Carousel** – Browse various historical locations in an interactive slideshow.
+  
 - **Virtual Museum** – Navigate a 3D globe, and visit virtual museums worldwide by selecting points of interest on the globe.
 
 - **Events** – Get to know about various events, around your location & content from various authors.
