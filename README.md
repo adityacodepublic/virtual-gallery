@@ -1,54 +1,18 @@
-# React + TypeScript + Vite
+# Virtual Gallery & Museum
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Virtual Gallery & Museum** is an immersive web experience that lets users explore global museums in a unique way.
 
-Currently, two official plugins are available:
+### Features:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Explore Carousel** – Browse various historical locations in an interactive slideshow.
+- **Virtual Museum** – Navigate a 3D globe, and visit virtual museums worldwide by selecting points of interest on the globe.
 
-## Expanding the ESLint configuration
+- **Events** – Get to know about various events, around your location & content from various authors.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Attribution
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+This project was made possible with inspiration and resources from:
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+- [Virtual Art Gallery](https://github.com/ClementCariou/virtual-art-gallery) – [museum on the globe near France on the globe]
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+- [Artwork 3D museum](https://github.com/TomPast/artwork-3D-museum) – [used as museums near France, Europe on the globe]
