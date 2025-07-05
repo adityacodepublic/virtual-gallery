@@ -1,6 +1,16 @@
 import Spline from "@splinetool/react-spline";
+import { useEffect, useState } from "react";
 
 export default function Globe() {
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  if (!isMounted) {
+    return null;
+  }
   return (
     <main className="w-screen h-screen">
       <Spline scene="https://prod.spline.design/375Ev6WouaPTJhwS/scene.splinecode" />
