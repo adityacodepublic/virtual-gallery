@@ -1,8 +1,6 @@
 import Spline from "@splinetool/react-spline";
-import { useEffect } from "react";
 
 export default function Globe() {
-  useEffect(() => {}, []);
   return (
     <main className="w-screen h-screen">
       <Spline scene="https://prod.spline.design/375Ev6WouaPTJhwS/scene.splinecode" />
